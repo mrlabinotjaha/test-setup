@@ -6,8 +6,8 @@ Simple setup verification tests for JavaScript and Python. Implement the TODO fu
 
 ```bash
 cd js
-make install
-make run-test
+npm install
+npx jest --verbose
 ```
 
 ### What to implement
@@ -21,10 +21,22 @@ In `js/math.js`, implement the following functions:
 
 ## Python
 
+### macOS / Linux
+
 ```bash
 cd python
-make setup
-make test
+python3 -m venv venv
+./venv/bin/pip install -r requirements.txt
+./venv/bin/pytest test_solution.py -v
+```
+
+### Windows
+
+```powershell
+cd python
+python -m venv venv
+.\venv\Scripts\pip install -r requirements.txt
+.\venv\Scripts\pytest test_solution.py -v
 ```
 
 ### What to implement
